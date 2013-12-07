@@ -1,7 +1,14 @@
 html,body{
 	height: 100%;
 	margin: 0;
+	font: normal 110% "League Gothic", "Arial Narrow", Arial, sans-serif;
+	text-transform: uppercase;
 
+}
+
+
+img{
+	max-width: 100%;
 }
 
 
@@ -13,6 +20,16 @@ html,body{
 }
 
 
+header{
+	width: 100%;
+	top:0;
+	left: 0;
+	height: 20px;
+	margin: 0 auto;
+	position: relative;
+	background:  #B70501;
+}
+
 .container{
 	width: 100%;
 	max-width: 1200px;
@@ -23,11 +40,25 @@ html,body{
 .center{
 	width:50%;
 	max-width: 600px;
+	min-width: 320px;
 	margin: 0 auto;
 	padding-top: 8.3333%;
 }
 
+.promo{
+	width: 50%;
+	max-width: 600px;
+	min-width: 320px;
+	margin: 0 auto;
+	text-align: center;
 
-img{
-	max-width: 100%;
 }
+
+.promo p {
+
+	
+}
+
+
+
+
