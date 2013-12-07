@@ -34,6 +34,11 @@ end
 
 gem 'normalize-rails'
 
+
+gem 'rails_12factor', group: :production
+
+gem 'rails_serve_static_assets'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
