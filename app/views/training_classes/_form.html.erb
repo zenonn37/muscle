@@ -1,0 +1,38 @@
+<%= form_for(@training_class) do |f| %>
+  <% if @training_class.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@training_class.errors.count, "error") %> prohibited this training_class from being saved:</h2>
+
+      <ul>
+      <% @training_class.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+   <div class="field">
+    <%= f.label :teacher_id %><br>
+    <%= f.text_field :teacher_id, collection: Teacher.all %>
+  </div>
+
+  <div class="field">
+    <%= f.label :start_time %><br>
+    <%= f.date_select :start_time %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :duration %><br>
+    <%= f.number_field :duration %>
+  </div>
+  <div class="field">
+    <%= f.label :level %><br>
+    <%= f.text_field :level %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

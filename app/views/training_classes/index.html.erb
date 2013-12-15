@@ -1,0 +1,33 @@
+<h1>Listing training_classes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Start time</th>
+      <th>Name</th>
+      <th>Duration</th>
+      <th>Level</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @training_classes.each do |training_class| %>
+      <tr>
+        <td><%= training_class.start_time %></td>
+        <td><%= training_class.name %></td>
+        <td><%= training_class.duration %></td>
+        <td><%= training_class.level %></td>
+        <td><%= link_to 'Show', training_class %></td>
+        <td><%= link_to 'Edit', edit_training_class_path(training_class) %></td>
+        <td><%= link_to 'Destroy', training_class, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Training class', new_training_class_path %>

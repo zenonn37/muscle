@@ -1,0 +1,39 @@
+<h1>Listing bios</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Certs</th>
+      <th>Exp;integer</th>
+      <th>History</th>
+      <th>About</th>
+      <th>Favs</th>
+      <th>Age</th>
+      <th>Gender</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bios.each do |bio| %>
+      <tr>
+        <td><%= bio.certs %></td>
+        <td><%= bio.exp;integer %></td>
+        <td><%= bio.history %></td>
+        <td><%= bio.about %></td>
+        <td><%= bio.favs %></td>
+        <td><%= bio.age %></td>
+        <td><%= bio.gender %></td>
+        <td><%= link_to 'Show', bio %></td>
+        <td><%= link_to 'Edit', edit_bio_path(bio) %></td>
+        <td><%= link_to 'Destroy', bio, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Bio', new_bio_path %>
