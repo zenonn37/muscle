@@ -3,6 +3,7 @@ html,body{
 	margin: 0;
 	font: normal 110% "League Gothic", "Arial Narrow", Arial, sans-serif;
 	text-transform: uppercase;
+	-webkit-font-smoothing: antialiased;
 
 }
 
